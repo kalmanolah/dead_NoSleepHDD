@@ -33,8 +33,11 @@ namespace NoSleepHDD
             timer.Tick += new EventHandler(timer_Tick);
             if (Environment.GetCommandLineArgs().Contains("/background"))
             {
-                this.Hide();
                 Start();
+            }
+            else
+            {
+                Show();
             }
         }
 
